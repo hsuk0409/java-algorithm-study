@@ -13,7 +13,7 @@ public class ProgLangTest {
         //given
         ProgLang ob1 = ProgLang.builder()
                 .name("C")
-                .usingCount(10)
+                .numberOfUsers(10)
                 .build();
         ProgLang ob2;
 
@@ -21,10 +21,10 @@ public class ProgLangTest {
         ob2 = ob1;
         String name = "JAVA";
         ob2.changeName(name);
-        ob2.changeUsingCount(15);
+        ob2.changeNumberOfUsers(15);
 
         //then
         assertThat(ob1.getName()).isEqualTo(name);
-        assertThat(ob1.getUsingCount()).isEqualTo(15);
+        assertThat(ob1.getNumberOfUsers()).isEqualTo(15);
     }
 }

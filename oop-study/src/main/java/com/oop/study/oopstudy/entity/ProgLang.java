@@ -8,19 +8,19 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class ProgLang {
     private String name;
-    private int usingCount;
+    private int numberOfUsers;
 
     @Builder
-    public ProgLang(String name, int usingCount) {
+    public ProgLang(String name, int numberOfUsers) {
         this.name = name;
-        this.usingCount = usingCount;
+        this.numberOfUsers = numberOfUsers;
     }
 
     public void changeName(String name) {
         this.name= name;
     }
 
-    public void changeUsingCount(int usingCount) {
-        this.usingCount = usingCount;
+    public void changeNumberOfUsers(int usingCount) {
+        this.numberOfUsers = usingCount;
     }
 }
