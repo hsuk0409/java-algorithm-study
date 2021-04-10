@@ -20,7 +20,7 @@ public class ProgLang {
         this.name= name;
     }
 
-    public void changeNumberOfUsers(int usingCount) {
-        this.numberOfUsers = usingCount;
+    public void changeNumberOfUsers(int numberOfUsers) {
+        this.numberOfUsers = numberOfUsers;
     }
 }
