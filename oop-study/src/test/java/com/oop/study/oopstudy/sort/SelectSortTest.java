@@ -9,8 +9,8 @@ import static org.assertj.core.api.Assertions.assertThat;
 @Slf4j
 public class SelectSortTest {
 
-    @Test
     @DisplayName("오름차순 선책정렬")
+    @Test
     void selectSortTest() {
         int[] arr = new int[]{ 4, 6, 11, 15, 2, 5, 1, 3 };
 
@@ -27,8 +27,8 @@ public class SelectSortTest {
         }
     }
 
-    @Test
     @DisplayName("최소값의 인덱스 가져오기")
+    @Test
     void testGetMinIndex() {
         int[] arr = new int[]{ 4, 6, 11, 15, 2, 5, 1, 3 };
         int minIndex = getIndexOfMinValue(arr, 0);
