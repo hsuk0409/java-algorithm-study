@@ -11,7 +11,7 @@ public class SelectSortTest {
 
     @Test
     @DisplayName("오름차순 선책정렬")
-    public void selectSortTest() {
+    void selectSortTest() {
         int[] arr = new int[]{ 4, 6, 11, 15, 2, 5, 1, 3 };
 
         sortSelectAsc(arr);
@@ -29,7 +29,7 @@ public class SelectSortTest {
 
     @Test
     @DisplayName("최소값의 인덱스 가져오기")
-    public void testGetMinIndex() {
+    void testGetMinIndex() {
         int[] arr = new int[]{ 4, 6, 11, 15, 2, 5, 1, 3 };
         int minIndex = getIndexOfMinValue(arr, 0);
 

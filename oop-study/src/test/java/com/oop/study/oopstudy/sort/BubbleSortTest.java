@@ -11,7 +11,7 @@ public class BubbleSortTest {
 
     @Test
     @DisplayName("오름차순 버블정렬")
-    public void bubbleSortTestAsc() {
+    void bubbleSortTestAsc() {
         int[] arr = new int[]{ 6, 5, 11, 2, 3, 1, 16 };
 
         sortBubbleAsc(arr);
