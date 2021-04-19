@@ -21,14 +21,14 @@ public class InsertSortTest {
     }
 
     private void sortInsert(int[] arr) {
-        for (int i = 0; i < arr.length; ++i) {
+        for (int i = 1; i < arr.length; ++i) {
+            int sd = arr[i];
             int prev = i - 1;
-            int tmpIndex = i;
-            while (prev >= 0 && arr[prev] > arr[tmpIndex]) {
-                int tmp = arr[prev];
-                arr[prev--] = arr[tmpIndex];
-                arr[tmpIndex--] = tmp;
+            while (prev >= 0 && arr[prev] > sd) {
+                arr[prev + 1] = arr[prev];
+                --prev;
             }
+            arr[prev + 1] = sd;
         }
     }
 }
