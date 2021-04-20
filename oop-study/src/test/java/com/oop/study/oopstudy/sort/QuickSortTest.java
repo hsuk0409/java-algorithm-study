@@ -13,21 +13,21 @@ public class QuickSortTest {
     @Test
     void quickSortTest() {
         int[] arr = new int[] { 7, 2, 5, 1, 3, 8, 7, 4, 9 ,6 };
-        quicksortRecursive(arr, 0, arr.length - 1);
+        quickSortRecursive(arr, 0, arr.length - 1);
 
         assertThat(arr[0]).isEqualTo(1);
         assertThat(arr[arr.length - 1]).isEqualTo(9);
     }
 
-    private void quicksortRecursive(int[] arr, int left, int right) {
+    private void quickSortRecursive(int[] arr, int left, int right) {
         if (left >= right) {
             return;
         }
 
         int pivotPos = partition(arr, left, right);
 
-        quicksortRecursive(arr, left, pivotPos - 1);
-        quicksortRecursive(arr, pivotPos + 1, right);
+        quickSortRecursive(arr, left, pivotPos - 1);
+        quickSortRecursive(arr, pivotPos + 1, right);
     }
 
     private int partition(int[] arr, int left, int right) {
