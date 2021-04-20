@@ -9,7 +9,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 @Slf4j
 public class InsertSortTest {
 
-    @DisplayName("삽입정렬 구현해보기")
+    @DisplayName("삽입 정렬 구현해보기")
     @Test
     void sortInsertTest() {
         int[] arr = new int[] { 4, 5, 11, 2, 1 };

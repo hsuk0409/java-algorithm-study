@@ -9,7 +9,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 @Slf4j
 public class BubbleSortTest {
 
-    @DisplayName("오름차순 버블정렬")
+    @DisplayName("오름차순 버블 정렬")
     @Test
     void bubbleSortTestAsc() {
         int[] arr = new int[]{ 6, 5, 11, 2, 3, 1, 16 };

@@ -9,7 +9,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 @Slf4j
 public class SelectSortTest {
 
-    @DisplayName("오름차순 선책정렬")
+    @DisplayName("오름차순 선책 정렬")
     @Test
     void selectSortTest() {
         int[] arr = new int[]{ 4, 6, 11, 15, 2, 5, 1, 3 };
