@@ -1,4 +1,4 @@
-package com.oop.study.oopstudy.sort;
+package com.oop.study.oopstudy.sort.quick;
 
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.DisplayName;
