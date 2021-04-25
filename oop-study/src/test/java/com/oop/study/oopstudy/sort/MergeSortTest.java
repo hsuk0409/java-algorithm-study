@@ -10,44 +10,44 @@ public class MergeSortTest {
     @DisplayName("병합 정렬 구현해보기")
     @Test
     public void myMergeSortTest() {
-        int[] src = new int[] {1, 9, 8, 5, 4, 2, 7, 6 };
-        printArr(src);
-        mergeSortRecursive(src, 0, src.length - 1);
-        printArr(src);
-        assertThat(src[src.length - 1]).isEqualTo(9);
+        int[] arr = new int[] {1, 9, 8, 5, 4, 2, 7, 6 };
+        printArr(arr);
+        mergeSortRecursive(arr, 0, arr.length - 1);
+        printArr(arr);
+        assertThat(arr[arr.length - 1]).isEqualTo(9);
     }
 
-    private void mergeSortRecursive(int[] src, int l, int r) {
+    private void mergeSortRecursive(int[] arr, int l, int r) {
         if (l < r) {
             int mid = (l + r) / 2;
-            mergeSortRecursive(src, l, mid);
-            mergeSortRecursive(src, mid + 1, r);
-            mergeSort(src, l, mid, r);
+            mergeSortRecursive(arr, l, mid);
+            mergeSortRecursive(arr, mid + 1, r);
+            mergeSort(arr, l, mid, r);
         }
     }
 
-    private void mergeSort(int[] src, int l, int mid, int r) {
+    private void mergeSort(int[] arr, int l, int mid, int r) {
         int p = l;
         int q = mid + 1;
         int idx = p;
-        int tmp[] = new int[src.length];
+        int tmp[] = new int[arr.length];
 
         while (p <= mid || q <= r) {
-            if (q > r || (p <= mid && src[p] < src[q])) {
-                tmp[idx++] = src[p++];
+            if (q > r || (p <= mid && arr[p] < arr[q])) {
+                tmp[idx++] = arr[p++];
             } else {
-                tmp[idx++] = src[q++];
+                tmp[idx++] = arr[q++];
             }
         }
 
         for (int i = l; i <= r; ++i) {
-            src[i] = tmp[i];
+            arr[i] = tmp[i];
         }
     }
 
-    private void printArr(int[] src) {
-        for (int i = 0; i < src.length; ++i) {
-            System.out.print(src[i] + " ");
+    private void printArr(int[] arr) {
+        for (int i = 0; i < arr.length; ++i) {
+            System.out.print(arr[i] + " ");
         }
         System.out.println();
     }
