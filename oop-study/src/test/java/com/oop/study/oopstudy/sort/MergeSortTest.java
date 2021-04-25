@@ -11,34 +11,44 @@ public class MergeSortTest {
     @Test
     public void myMergeSortTest() {
         int[] src = new int[] {1, 9, 8, 5, 4, 2, 7, 6 };
-        int[] tmp = new int[src.length];
-
-        sortMergeRecursive(src, tmp, 0, src.length - 1);
-
+        printArr(src);
+        mergeSortRecursive(src, 0, src.length - 1);
+        printArr(src);
         assertThat(src[src.length - 1]).isEqualTo(9);
     }
 
-    private void sortMergeRecursive(int[] src, int[] tmp, int s, int e) {
-        if (s < e) {
-            int mid = (s + e) / 2;
-            sortMergeRecursive(src, tmp, s, mid);
-            sortMergeRecursive(src, tmp, mid + 1, e);
+    private void mergeSortRecursive(int[] src, int l, int r) {
+        if (l < r) {
+            int mid = (l + r) / 2;
+            mergeSortRecursive(src, l, mid);
+            mergeSortRecursive(src, mid + 1, r);
+            mergeSort(src, l, mid, r);
+        }
+    }
 
-            int p = s;
-            int q = mid + 1;
-            int idx = p;
+    private void mergeSort(int[] src, int l, int mid, int r) {
+        int p = l;
+        int q = mid + 1;
+        int idx = p;
+        int tmp[] = new int[src.length];
 
-            while (p <= mid || q <= e) {
-                if (q > e || (p <= mid && src[p] < src[q])) {
-                    tmp[idx++] = src[p++];
-                } else {
-                    tmp[idx++] = src[q++];
-                }
-            }
-
-            for (int i = s; i <= e; ++i) {
-                src[i] = tmp[i];
+        while (p <= mid || q <= r) {
+            if (q > r || (p <= mid && src[p] < src[q])) {
+                tmp[idx++] = src[p++];
+            } else {
+                tmp[idx++] = src[q++];
             }
         }
+
+        for (int i = l; i <= r; ++i) {
+            src[i] = tmp[i];
+        }
+    }
+
+    private void printArr(int[] src) {
+        for (int i = 0; i < src.length; ++i) {
+            System.out.print(src[i] + " ");
+        }
+        System.out.println();
     }
 }
