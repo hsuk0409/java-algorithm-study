@@ -12,19 +12,19 @@ public class MyQuickSort2Test {
     public void sortQuickSecondsTest() {
         int[] arr = new int[] { 5, 8, 4, 5, 11, 2, 13, 1 };
 
-        sortQuickSecondsStudy(arr, 0, arr.length - 1);
+        myQuickSortRecursive(arr, 0, arr.length - 1);
     }
 
-    private void sortQuickSecondsStudy(int[] arr, int left, int right) {
+    private void myQuickSortRecursive(int[] arr, int left, int right) {
         if (left >= right) return;
 
         int pivotPos = partition(arr, left, right);
 
         // Left Sort
-        sortQuickSecondsStudy(arr, left, pivotPos - 1);
+        myQuickSortRecursive(arr, left, pivotPos - 1);
 
         // Right Sort
-        sortQuickSecondsStudy(arr, pivotPos + 1, right);
+        myQuickSortRecursive(arr, pivotPos + 1, right);
     }
 
     private int partition(int[] arr, int left, int right) {

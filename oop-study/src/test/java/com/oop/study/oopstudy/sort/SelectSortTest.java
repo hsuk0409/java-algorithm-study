@@ -14,11 +14,11 @@ public class SelectSortTest {
     void selectSortTest() {
         int[] arr = new int[]{ 4, 6, 11, 15, 2, 5, 1, 3 };
 
-        sortSelectAsc(arr);
+        selectSort(arr);
         assertThat(arr[0]).isEqualTo(1);
     }
 
-    private void sortSelectAsc(int[] arr) {
+    private void selectSort(int[] arr) {
         for (int i = 0; i < arr.length - 1; ++i) {
             int minIndex = getIndexOfMinValue(arr, i);
             int tmp = arr[i];

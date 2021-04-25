@@ -15,12 +15,12 @@ public class InsertSortTest {
         int[] arr = new int[] { 4, 5, 11, 2, 1 };
 
         assertThat(arr[0]).isEqualTo(4);
-        sortInsert(arr);
+        insertSort(arr);
         assertThat(arr[0]).isEqualTo(1);
         assertThat(arr[arr.length - 1]).isEqualTo(11);
     }
 
-    private void sortInsert(int[] arr) {
+    private void insertSort(int[] arr) {
         for (int i = 1; i < arr.length; ++i) {
             int sd = arr[i];
             int prev = i - 1;

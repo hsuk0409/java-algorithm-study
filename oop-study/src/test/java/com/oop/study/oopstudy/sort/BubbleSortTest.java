@@ -14,11 +14,11 @@ public class BubbleSortTest {
     void bubbleSortTestAsc() {
         int[] arr = new int[]{ 6, 5, 11, 2, 3, 1, 16 };
 
-        sortBubbleAsc(arr);
+        bubbleSort(arr);
         assertThat(arr[0]).isEqualTo(1);
     }
 
-    private void sortBubbleAsc(int[] arr) {
+    private void bubbleSort(int[] arr) {
         for (int i = 0; i < arr.length - 1; ++i) {
             for (int j = 0; j < arr.length - i - 1; ++j) {
                 if (arr[j] > arr[j + 1]) {
