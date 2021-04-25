@@ -9,8 +9,8 @@ import static org.assertj.core.api.Assertions.assertThat;
 @Slf4j
 public class SearchRotateArrayTest {
 
-    @Test
     @DisplayName("회전된 배열에서의 이진 탐색")
+    @Test
     public void searchRotateArray() {
         int[] array = new int[]{20, 25, 29, 33, 1, 3, 5, 6, 10, 11, 19};
 

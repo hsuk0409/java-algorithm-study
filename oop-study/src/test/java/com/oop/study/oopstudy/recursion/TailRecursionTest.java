@@ -7,8 +7,8 @@ import org.junit.jupiter.api.Test;
 @Slf4j
 public class TailRecursionTest {
 
-    @Test
     @DisplayName("스택 프레임 몇개가 쌓이는지 디버깅 해보기")
+    @Test
     public void tailRecursion() {
         puff(4, 6, 4);
     }
