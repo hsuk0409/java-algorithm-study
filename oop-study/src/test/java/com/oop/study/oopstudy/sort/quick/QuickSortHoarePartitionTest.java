@@ -9,10 +9,15 @@ public class QuickSortHoarePartitionTest {
     @Test
     public void quickSortHoarePartition() {
         int[] arr = new int[]{ 3, 1, 5, 7, 2, 9, 8, 4 };
+        int[] arr2 = new int[]{ 1, 1, 1, 1, 1, 1, 1 };
 
         printArr(arr);
         quickSortRecursive(arr, 0, arr.length - 1);
         printArr(arr);
+
+        printArr(arr2);
+        quickSortRecursive(arr2, 0, arr2.length - 1);
+        printArr(arr2);
     }
 
     private void quickSortRecursive(int[] arr, int l, int r) {
@@ -30,10 +35,10 @@ public class QuickSortHoarePartitionTest {
         int i = l + 1;
         int j = r;
         while (i <= j) {
-            while (i < r && arr[i] < pivot) {
+            while (i < r && arr[i] <= pivot) {
                 ++i;
             }
-            while (j > l && arr[j] > pivot) {
+            while (j > l && arr[j] >= pivot) {
                 --j;
             }
             if (i >= j) break;
