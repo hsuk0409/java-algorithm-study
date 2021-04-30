@@ -4,18 +4,17 @@ import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import static org.assertj.core.api.Assertions.assertThat;
-
 @Slf4j
 public class BubbleSortTest {
 
-    @DisplayName("오름차순 버블 정렬")
+    @DisplayName("오름차순 버블 정렬#2")
     @Test
     void bubbleSortTestAsc() {
         int[] arr = new int[]{ 6, 5, 11, 2, 3, 1, 16 };
 
+        printArr(arr);
         bubbleSort(arr);
-        assertThat(arr[0]).isEqualTo(1);
+        printArr(arr);
     }
 
     private void bubbleSort(int[] arr) {
@@ -28,5 +27,12 @@ public class BubbleSortTest {
                 }
             }
         }
+    }
+
+    private void printArr(int[] arr) {
+        for (int i = 0; i < arr.length; ++i) {
+            System.out.print(arr[i] + " ");
+        }
+        System.out.println();
     }
 }
