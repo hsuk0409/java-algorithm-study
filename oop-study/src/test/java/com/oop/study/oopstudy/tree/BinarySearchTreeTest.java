@@ -6,27 +6,27 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class BinaryTreeTest {
+public class BinarySearchTreeTest {
 
-    @DisplayName("이진 트리 저장 호출")
+    @DisplayName("이진 탐색 트리 저장 호출")
     @Test
     void binarySearchTreeTest() {
         //given
         MyNode node = MyNode.builder().data(6).build();
 
         //when
-        saveTree(node, 2);
-        saveTree(node, 11);
-        saveTree(node, 3);
-        saveTree(node, 7);
-        saveTree(node, 5);
+        saveBts(node, 2);
+        saveBts(node, 11);
+        saveBts(node, 3);
+        saveBts(node, 7);
+        saveBts(node, 5);
 
         //then
         assertThat(node.getLeft().getData()).isEqualTo(2);
         assertThat(node.getRight().getData()).isEqualTo(11);
     }
 
-    void saveTree(MyNode node, int data) {
+    void saveBts(MyNode node, int data) {
         if (node == null) {
            return;
         }
@@ -40,7 +40,7 @@ public class BinaryTreeTest {
                 node.updateLeftNode(newNode);
                 return;
             } else {
-                saveTree(left, data);
+                saveBts(left, data);
             }
         } else if (nodeData < data) {
             MyNode right = node.getRight();
@@ -51,7 +51,7 @@ public class BinaryTreeTest {
                 node.updateRightNode(newNode);
                 return;
             } else {
-                saveTree(right, data);
+                saveBts(right, data);
             }
         }
     }
