@@ -8,51 +8,45 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class BinarySearchTreeTest {
 
-    @DisplayName("이진 탐색 트리 저장 호출")
+    @DisplayName("이진 탐색 트리 저장")
     @Test
-    void binarySearchTreeTest() {
+    void bstSaveTest() {
         //given
         MyNode node = MyNode.builder().data(6).build();
 
         //when
-        saveBts(node, 2);
-        saveBts(node, 11);
-        saveBts(node, 3);
-        saveBts(node, 7);
-        saveBts(node, 5);
+        node.insertRecursive(node, 2);
+        node.insertRecursive(node, 11);
+        node.insertRecursive(node, 15);
+        node.insertRecursive(node, 3);
+        node.insertRecursive(node, 5);
 
         //then
+        // left
         assertThat(node.getLeft().getData()).isEqualTo(2);
+        assertThat(node.getLeft().getRight().getData()).isEqualTo(3);
+        assertThat(node.getLeft().getRight().getRight().getData()).isEqualTo(5);
+
+        // right
         assertThat(node.getRight().getData()).isEqualTo(11);
+        assertThat(node.getRight().getRight().getData()).isEqualTo(15);
     }
 
-    void saveBts(MyNode node, int data) {
-        if (node == null) {
-           return;
-        }
-        int nodeData = node.getData();
-        if (nodeData >= data) {
-            MyNode left = node.getLeft();
-            if (left == null) {
-                MyNode newNode = MyNode.builder()
-                        .data(data)
-                        .build();
-                node.updateLeftNode(newNode);
-                return;
-            } else {
-                saveBts(left, data);
-            }
-        } else if (nodeData < data) {
-            MyNode right = node.getRight();
-            if (right == null) {
-                MyNode newNode = MyNode.builder()
-                        .data(data)
-                        .build();
-                node.updateRightNode(newNode);
-                return;
-            } else {
-                saveBts(right, data);
-            }
-        }
+    @DisplayName("이진 탐색 트리 탐색")
+    @Test
+    void bstSearchTest() {
+        //given
+        MyNode node = MyNode.builder().data(6).build();
+        node.insertRecursive(node, 2);
+        node.insertRecursive(node, 11);
+        node.insertRecursive(node, 15);
+        node.insertRecursive(node, 3);
+        node.insertRecursive(node, 5);
+
+        //when
+        MyNode nodeFound = node.getNodeOrNull(node, 11);
+
+        //then
+        assertThat(nodeFound.getData()).isEqualTo(node.getRight().getData());
     }
 }

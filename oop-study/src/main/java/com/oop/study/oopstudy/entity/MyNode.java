@@ -12,17 +12,34 @@ public class MyNode {
     private MyNode right;
 
     @Builder
-    public MyNode(int data, MyNode left, MyNode right) {
+    public MyNode(int data) {
         this.data = data;
-        this.left = left;
-        this.right = right;
     }
 
-    public void updateLeftNode(MyNode newNode) {
-        this.left = newNode;
+    public MyNode insertRecursive(final MyNode node, int data) {
+        if (node == null) {
+            return MyNode.builder().data(data).build();
+        }
+        if (data < node.data) {
+            node.left = insertRecursive(node.left, data);
+        } else {
+            node.right = insertRecursive(node.right, data);
+        }
+
+        return node;
     }
 
-    public void updateRightNode(MyNode newNode) {
-        this.right = newNode;
+    public MyNode getNodeOrNull(final MyNode node, int data) {
+        if (node == null) {
+            return null;
+        }
+        if (node.data == data) {
+            return node;
+        }
+        if (data < node.data) {
+            return getNodeOrNull(node.left, data);
+        } else {
+            return getNodeOrNull(node.right, data);
+        }
     }
 }
