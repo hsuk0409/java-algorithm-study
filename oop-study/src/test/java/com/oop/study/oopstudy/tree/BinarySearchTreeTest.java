@@ -49,4 +49,22 @@ public class BinarySearchTreeTest {
         //then
         assertThat(nodeFound.getData()).isEqualTo(node.getRight().getData());
     }
+
+    @DisplayName("이진 탐색 트리 삭제(왼쪽 하위 최댓값 사용)")
+    @Test
+    void bstRemoveTest() {
+        //given
+        MyNode node = MyNode.builder().data(6).build();
+        node.insertRecursive(node, 2);
+        node.insertRecursive(node, 11);
+        node.insertRecursive(node, 15);
+        node.insertRecursive(node, 3);
+        node.insertRecursive(node, 5);
+
+        //when
+        node.removeLeftMaxNode(6);
+
+        //then
+        assertThat(node.getData()).isEqualTo(5);
+    }
 }

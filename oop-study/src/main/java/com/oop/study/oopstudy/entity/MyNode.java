@@ -42,4 +42,20 @@ public class MyNode {
             return getNodeOrNull(node.right, data);
         }
     }
+
+    public void removeLeftMaxNode(int data) {
+        MyNode toRemoveNode = getNodeOrNull(this, data);
+        if (toRemoveNode != null) {
+            MyNode predecessor = toRemoveNode;
+            if (toRemoveNode.left != null) {
+                MyNode left = toRemoveNode.left;
+                while (left.right != null) {
+                    predecessor = left;
+                    left = left.right;
+                }
+                toRemoveNode.data = predecessor.right.data;
+                predecessor.right = null;
+            }
+        }
+    }
 }
