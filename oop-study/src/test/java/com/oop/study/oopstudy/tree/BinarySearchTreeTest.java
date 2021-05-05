@@ -67,4 +67,19 @@ public class BinarySearchTreeTest {
         //then
         assertThat(node.getData()).isEqualTo(5);
     }
+
+    @DisplayName("이진 탐색 트리 중위 순회하기")
+    @Test
+    void traverseInOderTest() {
+        //given
+        MyNode node = MyNode.builder().data(1).build();
+        node.insertRecursive(node, 2);
+        node.insertRecursive(node, 11);
+        node.insertRecursive(node, 15);
+        node.insertRecursive(node, 3);
+        node.insertRecursive(node, 5);
+
+        //when &then
+        node.traverseInOrder(node);
+    }
 }

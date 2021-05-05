@@ -58,4 +58,14 @@ public class MyNode {
             }
         }
     }
+
+    public void traverseInOrder(MyNode node) {
+        if (node == null) {
+            return;
+        }
+
+        traverseInOrder(node.left);
+        System.out.println(node.data);
+        traverseInOrder(node.right);
+    }
 }
