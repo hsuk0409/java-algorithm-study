@@ -72,7 +72,7 @@ public class BinarySearchTreeTest {
     @Test
     void traverseInOderTest() {
         //given
-        MyNode node = MyNode.builder().data(1).build();
+        MyNode node = MyNode.builder().data(6).build();
         node.insertRecursive(node, 2);
         node.insertRecursive(node, 11);
         node.insertRecursive(node, 15);
@@ -81,5 +81,20 @@ public class BinarySearchTreeTest {
 
         //when &then
         node.traverseInOrder(node);
+    }
+
+    @DisplayName("이진 탐색 트리 전위 순회하기")
+    @Test
+    void traversePreOderTest() {
+        //given
+        MyNode node = MyNode.builder().data(6).build();
+        node.insertRecursive(node, 2);
+        node.insertRecursive(node, 11);
+        node.insertRecursive(node, 15);
+        node.insertRecursive(node, 3);
+        node.insertRecursive(node, 5);
+
+        //when &then
+        node.traversePreOrder(node);
     }
 }

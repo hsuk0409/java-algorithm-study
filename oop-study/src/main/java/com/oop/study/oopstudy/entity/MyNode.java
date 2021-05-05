@@ -68,4 +68,14 @@ public class MyNode {
         System.out.println(node.data);
         traverseInOrder(node.right);
     }
+
+    public void traversePreOrder(MyNode node) {
+        if (node == null) {
+            return;
+        }
+
+        System.out.println(node.data);
+        traversePreOrder(node.left);
+        traversePreOrder(node.right);
+    }
 }
