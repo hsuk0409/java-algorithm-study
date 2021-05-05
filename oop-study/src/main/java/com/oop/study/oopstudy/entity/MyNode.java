@@ -4,6 +4,8 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
+import java.util.Stack;
+
 @Getter
 @NoArgsConstructor
 public class MyNode {
@@ -59,23 +61,46 @@ public class MyNode {
         }
     }
 
-    public void traverseInOrder(MyNode node) {
+    public void traverseInOrderRecursive(MyNode node) {
         if (node == null) {
             return;
         }
 
-        traverseInOrder(node.left);
+        traverseInOrderRecursive(node.left);
         System.out.println(node.data);
-        traverseInOrder(node.right);
+        traverseInOrderRecursive(node.right);
     }
 
-    public void traversePreOrder(MyNode node) {
+    public void traversePreOrderRecursive(MyNode node) {
         if (node == null) {
             return;
         }
 
         System.out.println(node.data);
-        traversePreOrder(node.left);
-        traversePreOrder(node.right);
+        traversePreOrderRecursive(node.left);
+        traversePreOrderRecursive(node.right);
+    }
+
+    public void traversePreOrder(final MyNode node) {
+        if (node == null) {
+            return;
+        }
+
+        Stack<MyNode> nodes = new Stack<>();
+        nodes.push(node);
+
+        while (!nodes.empty()) {
+            MyNode myNode = nodes.pop();
+
+            System.out.println(myNode.data);
+
+            if (myNode.right != null) {
+                nodes.push(myNode.right);
+            }
+
+            if (myNode.left != null) {
+                nodes.push(myNode.left);
+            }
+        }
     }
 }

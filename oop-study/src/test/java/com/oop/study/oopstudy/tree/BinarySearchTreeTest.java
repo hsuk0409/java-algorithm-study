@@ -80,7 +80,7 @@ public class BinarySearchTreeTest {
         node.insertRecursive(node, 5);
 
         //when &then
-        node.traverseInOrder(node);
+        node.traverseInOrderRecursive(node);
     }
 
     @DisplayName("이진 탐색 트리 전위 순회하기")
@@ -95,6 +95,8 @@ public class BinarySearchTreeTest {
         node.insertRecursive(node, 5);
 
         //when &then
+        node.traversePreOrderRecursive(node);
+        System.out.println("--------------------");
         node.traversePreOrder(node);
     }
 }
