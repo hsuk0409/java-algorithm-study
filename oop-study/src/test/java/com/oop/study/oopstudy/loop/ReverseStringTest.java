@@ -1,4 +1,4 @@
-package com.oop.study.oopstudy.recursion;
+package com.oop.study.oopstudy.loop;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
