@@ -8,19 +8,19 @@ import java.util.Stack;
 
 @Getter
 @NoArgsConstructor
-public class MyNode {
+public class BinaryNode {
     private int data;
-    private MyNode left;
-    private MyNode right;
+    private BinaryNode left;
+    private BinaryNode right;
 
     @Builder
-    public MyNode(int data) {
+    public BinaryNode(int data) {
         this.data = data;
     }
 
-    public MyNode insertRecursive(final MyNode node, int data) {
+    public BinaryNode insertRecursive(final BinaryNode node, int data) {
         if (node == null) {
-            return MyNode.builder().data(data).build();
+            return BinaryNode.builder().data(data).build();
         }
         if (data < node.data) {
             node.left = insertRecursive(node.left, data);
@@ -31,7 +31,7 @@ public class MyNode {
         return node;
     }
 
-    public MyNode getNodeOrNull(final MyNode node, int data) {
+    public BinaryNode getNodeOrNull(final BinaryNode node, int data) {
         if (node == null) {
             return null;
         }
@@ -46,11 +46,11 @@ public class MyNode {
     }
 
     public void removeLeftMaxNode(int data) {
-        MyNode toRemoveNode = getNodeOrNull(this, data);
+        BinaryNode toRemoveNode = getNodeOrNull(this, data);
         if (toRemoveNode != null) {
-            MyNode predecessor = toRemoveNode;
+            BinaryNode predecessor = toRemoveNode;
             if (toRemoveNode.left != null) {
-                MyNode left = toRemoveNode.left;
+                BinaryNode left = toRemoveNode.left;
                 while (left.right != null) {
                     predecessor = left;
                     left = left.right;
@@ -61,7 +61,7 @@ public class MyNode {
         }
     }
 
-    public void traverseInOrderRecursive(MyNode node) {
+    public void traverseInOrderRecursive(BinaryNode node) {
         if (node == null) {
             return;
         }
@@ -71,7 +71,7 @@ public class MyNode {
         traverseInOrderRecursive(node.right);
     }
 
-    public void traversePreOrderRecursive(MyNode node) {
+    public void traversePreOrderRecursive(BinaryNode node) {
         if (node == null) {
             return;
         }
@@ -81,25 +81,25 @@ public class MyNode {
         traversePreOrderRecursive(node.right);
     }
 
-    public void traversePreOrder(final MyNode node) {
+    public void traversePreOrder(final BinaryNode node) {
         if (node == null) {
             return;
         }
 
-        Stack<MyNode> nodes = new Stack<>();
+        Stack<BinaryNode> nodes = new Stack<>();
         nodes.push(node);
 
         while (!nodes.empty()) {
-            MyNode myNode = nodes.pop();
+            BinaryNode binaryNode = nodes.pop();
 
-            System.out.println(myNode.data);
+            System.out.println(binaryNode.data);
 
-            if (myNode.right != null) {
-                nodes.push(myNode.right);
+            if (binaryNode.right != null) {
+                nodes.push(binaryNode.right);
             }
 
-            if (myNode.left != null) {
-                nodes.push(myNode.left);
+            if (binaryNode.left != null) {
+                nodes.push(binaryNode.left);
             }
         }
     }

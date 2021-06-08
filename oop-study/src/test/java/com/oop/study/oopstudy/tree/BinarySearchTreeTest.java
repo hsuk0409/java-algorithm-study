@@ -1,6 +1,6 @@
 package com.oop.study.oopstudy.tree;
 
-import com.oop.study.oopstudy.entity.MyNode;
+import com.oop.study.oopstudy.entity.BinaryNode;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -12,7 +12,7 @@ public class BinarySearchTreeTest {
     @Test
     void bstSaveTest() {
         //given
-        MyNode node = MyNode.builder().data(6).build();
+        BinaryNode node = BinaryNode.builder().data(6).build();
 
         //when
         node.insertRecursive(node, 2);
@@ -36,7 +36,7 @@ public class BinarySearchTreeTest {
     @Test
     void bstSearchTest() {
         //given
-        MyNode node = MyNode.builder().data(6).build();
+        BinaryNode node = BinaryNode.builder().data(6).build();
         node.insertRecursive(node, 2);
         node.insertRecursive(node, 11);
         node.insertRecursive(node, 15);
@@ -44,7 +44,7 @@ public class BinarySearchTreeTest {
         node.insertRecursive(node, 5);
 
         //when
-        MyNode nodeFound = node.getNodeOrNull(node, 11);
+        BinaryNode nodeFound = node.getNodeOrNull(node, 11);
 
         //then
         assertThat(nodeFound.getData()).isEqualTo(node.getRight().getData());
@@ -54,7 +54,7 @@ public class BinarySearchTreeTest {
     @Test
     void bstRemoveTest() {
         //given
-        MyNode node = MyNode.builder().data(6).build();
+        BinaryNode node = BinaryNode.builder().data(6).build();
         node.insertRecursive(node, 2);
         node.insertRecursive(node, 11);
         node.insertRecursive(node, 15);
@@ -72,7 +72,7 @@ public class BinarySearchTreeTest {
     @Test
     void traverseInOderTest() {
         //given
-        MyNode node = MyNode.builder().data(6).build();
+        BinaryNode node = BinaryNode.builder().data(6).build();
         node.insertRecursive(node, 2);
         node.insertRecursive(node, 11);
         node.insertRecursive(node, 15);
@@ -87,7 +87,7 @@ public class BinarySearchTreeTest {
     @Test
     void traversePreOderTest() {
         //given
-        MyNode node = MyNode.builder().data(6).build();
+        BinaryNode node = BinaryNode.builder().data(6).build();
         node.insertRecursive(node, 2);
         node.insertRecursive(node, 11);
         node.insertRecursive(node, 15);
