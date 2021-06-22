@@ -94,6 +94,7 @@ public class BinaryNode {
 
             System.out.println(binaryNode.data);
 
+            // 스택은 LIFO 방식이니까 오른쪽 먼저 들어간다.
             if (binaryNode.right != null) {
                 nodes.push(binaryNode.right);
             }
