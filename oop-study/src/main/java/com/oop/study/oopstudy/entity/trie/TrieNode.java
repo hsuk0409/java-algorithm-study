@@ -1,7 +1,5 @@
 package com.oop.study.oopstudy.entity.trie;
 
-import java.util.Stack;
-
 public class TrieNode {
     private TrieNode[] childes;
     private char data;
@@ -32,18 +30,15 @@ public class TrieNode {
         node.addChildes(word, i);
     }
 
-    public void searchDepthFirst() {
-        Stack<TrieNode> stack = new Stack<>();
-        stack.push(this);
+    public char getData() {
+        return this.data;
+    }
 
-        while (!stack.isEmpty()) {
-            TrieNode next = stack.pop();
-            System.out.println("Data: " + next.data);
-            System.out.println("Is Last?: " + next.isLast);
+    public boolean getIsLast() {
+        return this.isLast;
+    }
 
-            for (TrieNode tmp : next.childes) {
-                stack.push(tmp);
-            }
-        }
+    public TrieNode[] getChildes() {
+        return this.childes;
     }
 }

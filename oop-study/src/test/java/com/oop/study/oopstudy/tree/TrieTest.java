@@ -10,7 +10,7 @@ public class TrieTest {
     @Test
     void saveTrieTest() {
         //given
-        final String word = "justin";
+        final String[] word = { "justin", "justify" };
 
         //when
         Trie trie = new Trie(word);
