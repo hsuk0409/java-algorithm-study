@@ -1,5 +1,9 @@
 package com.oop.study.oopstudy.entity.trie;
 
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.Stack;
+
 public class TrieNode {
     private TrieNode[] childes;
     private char data;
@@ -30,15 +34,37 @@ public class TrieNode {
         node.addChildes(word, i);
     }
 
-    public char getData() {
-        return this.data;
+    public void searchDfs() {
+        Stack<TrieNode> stack = new Stack<>();
+        stack.push(this);
+
+        while (!stack.isEmpty()) {
+            TrieNode next = stack.pop();
+            System.out.println("Data: " + next.data);
+            System.out.println("Is Last?: " + next.isLast);
+
+            for (TrieNode tmp : next.childes) {
+                if (tmp != null) {
+                    stack.push(tmp);
+                }
+            }
+        }
     }
 
-    public boolean getIsLast() {
-        return this.isLast;
-    }
+    public void searchBfs() {
+        Queue<TrieNode> queue = new LinkedList<>();
+        queue.add(this);
 
-    public TrieNode[] getChildes() {
-        return this.childes;
+        while (!queue.isEmpty()) {
+            TrieNode next = queue.poll();
+            System.out.println("Data: " + next.data);
+            System.out.println("Is Last?: " + next.isLast);
+
+            for (TrieNode tmp : next.childes) {
+                if (tmp != null) {
+                    queue.add(tmp);
+                }
+            }
+        }
     }
 }

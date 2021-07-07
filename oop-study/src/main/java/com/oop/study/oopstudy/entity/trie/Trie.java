@@ -14,19 +14,10 @@ public class Trie {
 
 
     public void searchDepthFirst() {
-        Stack<TrieNode> stack = new Stack<>();
-        stack.push(root);
+        this.root.searchDfs();
+    }
 
-        while (!stack.isEmpty()) {
-            TrieNode thisNode = stack.pop();
-            System.out.println("Data: " + thisNode.getData());
-            System.out.println("Is Last?: " + thisNode.getIsLast());
-
-            for (TrieNode tmp : thisNode.getChildes()) {
-                if (tmp != null) {
-                    stack.push(tmp);
-                }
-            }
-        }
+    public void searchBreadthFirst() {
+        this.root.searchBfs();
     }
 }
