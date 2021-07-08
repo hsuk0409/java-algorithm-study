@@ -39,20 +39,14 @@ public class TicTacToe {
 
         ArrayList<Move> moves = new ArrayList<>();
 
-        for (int i = 0; i < availableIndexes.size(); ++i) {
-            int index = availableIndexes.get(i);
-
+        for (int index : availableIndexes) {
             Player[] newBoard = copyBoard(board);
 
             newBoard[index] = turn;
 
             Player nextPlayer = turn == player ? opponent : player;
 
-            int score = getBestMoveRecursive(newBoard,
-                    player,
-                    opponent,
-                    nextPlayer)
-                    .getScore();
+            int score = getBestMoveRecursive(newBoard, player, opponent, nextPlayer).getScore();
 
             Move move = new Move(index, score);
             moves.add(move);
