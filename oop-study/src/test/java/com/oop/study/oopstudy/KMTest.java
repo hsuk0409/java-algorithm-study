@@ -32,22 +32,22 @@ public class KMTest {
         }
 
         int size = list.size();
-        char lastChar = ' ';
+        boolean isLast = false;
         for (int i = 0; i < list.size(); ++i) {
             char c = list.get(i);
             sb.append(c);
             ++numCount;
             --size;
 
-            if (size == 3 && lastChar == '-') {
+            if (size == 3 && isLast) {
                 ++numCount;
             }
 
-            lastChar = ' ';
+            isLast = false;
             if (numCount > 2 && size != 0) {
                 sb.append('-');
                 numCount = 0;
-                lastChar = '-';
+                isLast = true;
             }
         }
 
