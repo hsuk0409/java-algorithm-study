@@ -1,7 +1,5 @@
 package com.oop.study.oopstudy.entity.trie;
 
-import java.util.Stack;
-
 public class Trie {
     private TrieNode root;
 
