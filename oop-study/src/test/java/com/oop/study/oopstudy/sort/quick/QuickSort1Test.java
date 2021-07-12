@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @Slf4j
-public class QuickSortTest {
+public class QuickSort1Test {
 
     @DisplayName("퀵 정렬 구현해보기")
     @Test
