@@ -23,11 +23,13 @@ public class ReverseStringTest {
         char[] arr = str.toCharArray();
         int s = 0;
         int e = arr.length - 1;
+
         while (s < e) {
             char tmp = arr[s];
             arr[s++] = arr[e];
             arr[e--] = tmp;
         }
+
         return new String(arr);
     }
 }
