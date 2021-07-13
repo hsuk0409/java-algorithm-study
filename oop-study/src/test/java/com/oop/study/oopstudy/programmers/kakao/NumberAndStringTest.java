@@ -1,20 +1,38 @@
 package com.oop.study.oopstudy.programmers.kakao;
 
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import java.util.HashMap;
 import java.util.Map;
 
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.is;
+
 public class NumberAndStringTest {
+    @DisplayName("해시맵 만들어서 탐색")
     @Test
     void test() {
+        String s = "12five4threesixseven123";
+        int mySolution = mySolution(s);
+
+        assertThat(mySolution, is(1254367123));
+    }
+
+    @DisplayName("String ReplaceAll 사용")
+    @Test
+    void test2() {
+        String s = "12five4threesixseven123";
+        int otherSolution = otherSolution(s);
+
+        assertThat(otherSolution, is(1254367123));
     }
 
     public int otherSolution(String s) {
         String[] arr = {"zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"};
         for (int i = 0; i < arr.length; i++) {
             if (s.contains(arr[i])) {
-                s = s.replaceAll(arr[i], Integer.toString(i));
+                s = s.replaceAll(arr[i], String.valueOf(i));
             }
         }
         return Integer.parseInt(s);
@@ -26,15 +44,14 @@ public class NumberAndStringTest {
         String tmp = "";
         char[] chars = s.toCharArray();
 
-        for (int i = 0; i < chars.length; ++i) {
-            if (chars[i] > 47 && chars[i] < 58) {
-                sb.append(chars[i]);
+        for (char c : chars) {
+            if (c > 47 && c < 58) {
+                sb.append(c);
             } else {
-                tmp += String.valueOf(chars[i]);
+                tmp += String.valueOf(c);
             }
 
             if (tmp.length() > 2 && map.containsKey(tmp)) {
-                System.out.println(tmp);
                 sb.append(map.get(tmp));
                 tmp = "";
             }
