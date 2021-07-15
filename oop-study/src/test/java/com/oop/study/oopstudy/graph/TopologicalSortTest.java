@@ -52,7 +52,7 @@ public class TopologicalSortTest {
         linkedList.addFirst(course);
     }
 
-    public final class Course {
+    public static final class Course {
         private final String title;
         private final ArrayList<Course> nextCourses = new ArrayList<>();
 
