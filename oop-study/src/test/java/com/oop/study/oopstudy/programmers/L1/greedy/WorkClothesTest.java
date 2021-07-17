@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class WorkClothesTest {
 
-    public int getOptimizationShareCount(int m, int[] lost, int[] reserve) {
+    public int getOptimizationShareCount(int n, int[] lost, int[] reserve) {
         int answer = n - lost.length;
         Arrays.sort(lost);
         Arrays.sort(reserve);
