@@ -41,6 +41,6 @@ public class MyNodeTreeTest {
         node.removeTreeToLeftMax(15);
 
         //then
-        assertThat(node.getLeft().getData(), is(2));
+        assertThat(node.getLeft().getData(), is(5));
     }
 }

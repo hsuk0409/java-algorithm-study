@@ -55,9 +55,7 @@ public class MyNode {
         MyNode node = getNodeOrNull(this, removeData);
         if (node != null) {
             MyNode preNode = node;
-            if (node.left == null && node.right == null) {
-                preNode = null;
-            } else if (node.left != null) {
+            if (node.left != null) {
                 MyNode leftMax = node.left;
                 while (leftMax.right != null) {
                     preNode = leftMax;
