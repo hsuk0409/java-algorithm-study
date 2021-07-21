@@ -42,9 +42,9 @@ public class QuickSort2Test {
         return standard;
     }
 
-    private void swap(int[] nums, int r, int l) {
-        int tmp = nums[r];
-        nums[r] = nums[l];
-        nums[l] = tmp;
+    private void swap(int[] nums, int l, int r) {
+        int tmp = nums[l];
+        nums[l] = nums[r];
+        nums[r] = tmp;
     }
 }
