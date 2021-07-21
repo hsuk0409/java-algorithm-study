@@ -33,7 +33,7 @@ public class LottoTest {
                 continue;
             }
             for (int winNum : winNums) {
-                if (myLottoNum == winNum) {
+                if (winNum == myLottoNum) {
                     ++sameCnt;
                 }
             }
