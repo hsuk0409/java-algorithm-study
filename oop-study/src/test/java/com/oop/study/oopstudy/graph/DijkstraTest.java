@@ -15,7 +15,6 @@ public class DijkstraTest {
         HashMap<String, Node> nodes = createNodes();
 
         HashMap<String, String> prevs = new HashMap<>();
-
         HashMap<String, Integer> minDists = Dijkstra.run(nodes, "Home", prevs);
 
         int schoolDist = minDists.get("School");
