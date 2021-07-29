@@ -63,7 +63,7 @@ public class PHTest {
     public int getIndexBinarySearchLoop(int num, int[] arr) {
         int s = 0;
         int e = arr.length - 1;
-        int mid = 0;
+        int mid;
 
         while (s <= e) {
             mid = (s + e) / 2;
