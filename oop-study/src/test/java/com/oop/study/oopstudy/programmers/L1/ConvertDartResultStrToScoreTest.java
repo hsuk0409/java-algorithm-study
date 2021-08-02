@@ -26,9 +26,8 @@ public class ConvertDartResultStrToScoreTest {
             } else if (c == 'S' || c == 'D' || c == 'T') {
                 int n = Integer.parseInt(str);
 
-                if (c == 'S') n = (int)Math.pow(n, 1);
-                else if (c == 'D') n = (int)Math.pow(n, 2);
-                else n = (int)Math.pow(n, 3);
+                if (c == 'D') n = (int)Math.pow(n, 2);
+                else if (c == 'T') n = (int)Math.pow(n, 3);
 
                 nums[idx++] = n;
                 str = "";
