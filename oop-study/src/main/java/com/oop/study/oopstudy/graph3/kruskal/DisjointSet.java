@@ -3,7 +3,7 @@ package com.oop.study.oopstudy.graph3.kruskal;
 import java.util.HashMap;
 
 public final class DisjointSet {
-    private class SetNode {
+    private static class SetNode {
         private String parent;
         private int size;
 
