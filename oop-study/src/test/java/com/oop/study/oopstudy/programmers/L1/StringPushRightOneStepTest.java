@@ -4,7 +4,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 public class StringPushRightOneStepTest {
-    @DisplayName("시저암호 문제, 문자열 캐릭터 다루기")
+    @DisplayName("시저암호 문제, 문자열 아스키 코드 다루기")
     @Test
     void test() {
         String str = "a B z";
