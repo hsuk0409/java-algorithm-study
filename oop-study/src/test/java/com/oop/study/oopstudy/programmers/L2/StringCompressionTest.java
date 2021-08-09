@@ -24,7 +24,7 @@ public class StringCompressionTest {
     }
 
     private String compression(String str, int i) {
-        int cnt = 1;
+        int cnt = 0;
         String compression = "";
         String pattern = "";
 
