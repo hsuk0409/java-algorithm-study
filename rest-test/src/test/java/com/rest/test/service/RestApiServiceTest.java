@@ -13,7 +13,10 @@ class RestApiServiceTest {
     @DisplayName("RestTemplate을 사용한 API 호출 테스트")
     @Test
     void test() {
-        String data = restApiService.getData();
+        final String BASE_URL = "https://www.youtube.com/oembed";
+        final String PARAM_URL = "https://www.youtube.com/watch?v=dBD54EZIrZo&format=json";
+
+        String data = restApiService.getOembedData(BASE_URL, PARAM_URL);
 
         assert (data != null);
     }

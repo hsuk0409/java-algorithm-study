@@ -23,10 +23,9 @@ import java.util.Map;
 public class RestApiService {
     private final RestTemplate restTemplate;
 
-    public String getData() {
+    public String getOembedData(final String baseUrl, final String url) {
         HashMap<String, Object> result = new HashMap<>();
-        String url = "";
-        UriComponents uri = UriComponentsBuilder.fromHttpUrl(url).build();
+        UriComponents uri = UriComponentsBuilder.fromHttpUrl(baseUrl + "?url=" + url).build();
 
 
         HttpHeaders headers = new HttpHeaders();
