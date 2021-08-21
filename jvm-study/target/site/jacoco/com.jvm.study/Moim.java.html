@@ -4,16 +4,12 @@
     int maxNumberOfMember;
     int numberOfCurrentEnrollment;
 
-    public boolean isEnrolledFull() {
+    public boolean isEnrollmentFull() {
 <span class="pc bpc" id="L8" title="1 of 2 branches missed.">        if (numberOfCurrentEnrollment == 0) {</span>
 <span class="nc" id="L9">            return false;</span>
         }
 
-<span class="pc bpc" id="L12" title="1 of 2 branches missed.">        if (numberOfCurrentEnrollment &lt; maxNumberOfMember) {</span>
-<span class="fc" id="L13">            return false;</span>
-        }
-
-<span class="nc" id="L16">        return true;</span>
+<span class="pc bpc" id="L12" title="1 of 2 branches missed.">        return numberOfCurrentEnrollment &gt;= maxNumberOfMember;</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>
