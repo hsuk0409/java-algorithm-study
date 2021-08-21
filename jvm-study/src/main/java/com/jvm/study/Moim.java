@@ -9,10 +9,6 @@ public class Moim {
             return false;
         }
 
-        if (numberOfCurrentEnrollment < maxNumberOfMember) {
-            return false;
-        }
-
-        return true;
+        return numberOfCurrentEnrollment >= maxNumberOfMember;
     }
 }
