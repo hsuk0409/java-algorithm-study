@@ -23,7 +23,7 @@ import java.util.Map;
 public class RestApiService {
     private final RestTemplate restTemplate;
 
-    public String getOembedData(final String baseUrl, final String url) {
+    public HashMap<String, Object> getOembedData(final String baseUrl, final String url) {
         HashMap<String, Object> result = new HashMap<>();
         UriComponents uri = UriComponentsBuilder.fromHttpUrl(baseUrl + "?url=" + url).build();
 
@@ -36,15 +36,6 @@ public class RestApiService {
         result.put("header", resultMap.getHeaders());
         result.put("body", resultMap.getBody());
 
-        ObjectMapper mapper = new ObjectMapper();
-
-        try {
-            return mapper.writeValueAsString(resultMap.getBody());
-        } catch (JsonProcessingException ex) {
-            result.put("statusCode", "999");
-            result.put("body", "exception error");
-        }
-
-        return null;
+        return result;
     }
 }

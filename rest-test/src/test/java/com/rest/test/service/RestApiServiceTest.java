@@ -5,6 +5,8 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import java.util.HashMap;
+
 @SpringBootTest
 class RestApiServiceTest {
     @Autowired
@@ -16,8 +18,8 @@ class RestApiServiceTest {
         final String BASE_URL = "https://www.youtube.com/oembed";
         final String PARAM_URL = "https://www.youtube.com/watch?v=dBD54EZIrZo&format=json";
 
-        String data = restApiService.getOembedData(BASE_URL, PARAM_URL);
+        HashMap<String, Object> resultMap = restApiService.getOembedData(BASE_URL, PARAM_URL);
 
-        assert (data != null);
+        assert (resultMap.get("body") != null);
     }
 }
