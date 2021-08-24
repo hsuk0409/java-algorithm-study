@@ -12,6 +12,9 @@ class RestApiServiceTest {
     @Autowired
     private RestApiService restApiService;
 
+    @Autowired
+    private ApiService apiService;
+
     @DisplayName("RestTemplate을 사용한 API 호출 테스트")
     @Test
     void test() {
@@ -21,5 +24,12 @@ class RestApiServiceTest {
         HashMap<String, Object> resultMap = restApiService.getOembedData(BASE_URL, PARAM_URL);
 
         assert (resultMap.get("body") != null);
+    }
+
+    @Test
+    void apiTest() {
+        HashMap<String, Object> data = apiService.getData();
+
+        assert (data.get("body") != null);
     }
 }
