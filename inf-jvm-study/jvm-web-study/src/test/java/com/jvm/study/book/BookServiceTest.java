@@ -12,7 +12,7 @@ class BookServiceTest {
 
     @DisplayName("자바 빈 의존성 주입 테스트")
     @Test
-    void testOfInjectionBean() {
+    void testOfDependencyInjectionBean() {
         Assertions.assertNotNull(bookService);
         Assertions.assertNotNull(bookService.bookRepository);
     }
