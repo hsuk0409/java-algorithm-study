@@ -1,5 +1,6 @@
 package com.jvm.study;
 
+@MyAnnotation
 public class Book {
     private static String pvStcStr;
 
@@ -7,6 +8,7 @@ public class Book {
 
     private String pvStr;
 
+    @MyAnnotation
     public String pbStr;
 
     protected String ptStr;

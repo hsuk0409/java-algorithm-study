@@ -19,5 +19,22 @@ public class App {
         System.out.println();
         System.out.println("Book Class Methods");
         Arrays.stream(bookClass.getMethods()).forEach(System.out::println);
+
+        System.out.println();
+        System.out.println("Book Class Annotations");
+        Arrays.stream(bookClass.getDeclaredAnnotations()).forEach(System.out::println);
+        System.out.println("MyBook Class Annotations");
+        Arrays.stream(MyBook.class.getDeclaredAnnotations()).forEach(System.out::println);
+        Arrays.stream(MyBook.class.getAnnotations()).forEach(System.out::println);
+
+        System.out.println("Get Annotation Fields Value");
+        Arrays.stream(Book.class.getDeclaredFields()).forEach(
+                f -> Arrays.stream(f.getAnnotations()).forEach(a -> {
+                    if (a instanceof MyAnnotation) {
+                        MyAnnotation myAnnotation = (MyAnnotation) a;
+                        System.out.println(myAnnotation.value());
+                        System.out.println(myAnnotation.number());
+                    }
+        }));
     }
 }
