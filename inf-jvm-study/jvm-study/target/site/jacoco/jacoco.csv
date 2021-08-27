@@ -1,5 +1,8 @@
 GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+jvm-study,com.jvm.study.di,ContainerService,15,35,1,1,5,10,2,3,1,3
+jvm-study,com.jvm.study,Book,32,0,0,0,16,0,7,0,7,0
+jvm-study,com.jvm.study,MyBook,3,0,0,0,1,0,1,0,1,0
 jvm-study,com.jvm.study,MasulsaAgent,22,0,0,0,9,0,3,0,3,0
 jvm-study,com.jvm.study,Moja,5,0,0,0,2,0,2,0,2,0
 jvm-study,com.jvm.study,Moim,4,13,2,2,1,3,2,2,0,2
-jvm-study,com.jvm.study,App,10,0,0,0,3,0,2,0,2,0
+jvm-study,com.jvm.study,App,173,0,2,0,40,0,5,0,4,0

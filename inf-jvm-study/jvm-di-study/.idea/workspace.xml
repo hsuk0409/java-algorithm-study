@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="f8e3090c-7981-409e-9873-8df3e04a2cd6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/AccountRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/AccountService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/AppTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jvm-study/src/main/java/com/jvm/study/di/ContainerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jvm-study/src/main/java/com/jvm/study/di/Inject.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jvm-study/src/test/java/com/jvm/study/di/BookRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jvm-study/src/test/java/com/jvm/study/di/BookService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../jvm-study/src/test/java/com/jvm/study/di/ContainerServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jvm-study/target/jacoco.exec" beforeDir="false" afterPath="$PROJECT_DIR$/../jvm-study/target/jacoco.exec" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jvm-study/target/jvm-study-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../jvm-study/target/jvm-study-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jvm-study/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../jvm-study/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jvm-study/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../jvm-study/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jvm-study/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../jvm-study/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jvm-study/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../jvm-study/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jvm-study/target/site/jacoco/com.jvm.study/App.html" beforeDir="false" afterPath="$PROJECT_DIR$/../jvm-study/target/site/jacoco/com.jvm.study/App.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jvm-study/target/site/jacoco/com.jvm.study/App.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/../jvm-study/target/site/jacoco/com.jvm.study/App.java.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jvm-study/target/site/jacoco/com.jvm.study/MasulsaAgent.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/../jvm-study/target/site/jacoco/com.jvm.study/MasulsaAgent.java.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jvm-study/target/site/jacoco/com.jvm.study/Moim.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/../jvm-study/target/site/jacoco/com.jvm.study/Moim.java.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jvm-study/target/site/jacoco/com.jvm.study/Moja.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/../jvm-study/target/site/jacoco/com.jvm.study/Moja.java.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jvm-study/target/site/jacoco/com.jvm.study/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../jvm-study/target/site/jacoco/com.jvm.study/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jvm-study/target/site/jacoco/com.jvm.study/index.source.html" beforeDir="false" afterPath="$PROJECT_DIR$/../jvm-study/target/site/jacoco/com.jvm.study/index.source.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jvm-study/target/site/jacoco/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../jvm-study/target/site/jacoco/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jvm-study/target/site/jacoco/jacoco-resources/prettify.css" beforeDir="false" afterPath="$PROJECT_DIR$/../jvm-study/target/site/jacoco/jacoco-resources/prettify.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jvm-study/target/site/jacoco/jacoco-resources/prettify.js" beforeDir="false" afterPath="$PROJECT_DIR$/../jvm-study/target/site/jacoco/jacoco-resources/prettify.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jvm-study/target/site/jacoco/jacoco-resources/report.css" beforeDir="false" afterPath="$PROJECT_DIR$/../jvm-study/target/site/jacoco/jacoco-resources/report.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jvm-study/target/site/jacoco/jacoco-resources/sort.js" beforeDir="false" afterPath="$PROJECT_DIR$/../jvm-study/target/site/jacoco/jacoco-resources/sort.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jvm-study/target/site/jacoco/jacoco-sessions.html" beforeDir="false" afterPath="$PROJECT_DIR$/../jvm-study/target/site/jacoco/jacoco-sessions.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jvm-study/target/site/jacoco/jacoco.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../jvm-study/target/site/jacoco/jacoco.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jvm-study/target/site/jacoco/jacoco.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../jvm-study/target/site/jacoco/jacoco.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jvm-study/target/surefire-reports/TEST-com.jvm.study.AppTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../jvm-study/target/surefire-reports/TEST-com.jvm.study.AppTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jvm-study/target/surefire-reports/TEST-com.jvm.study.MoimTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../jvm-study/target/surefire-reports/TEST-com.jvm.study.MoimTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jvm-study/target/surefire-reports/com.jvm.study.AppTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../jvm-study/target/surefire-reports/com.jvm.study.AppTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../jvm-study/target/surefire-reports/com.jvm.study.MoimTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../jvm-study/target/surefire-reports/com.jvm.study.MoimTest.txt" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="1xIvjaadZOMOzz8uwawrpbtLtjA" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RunManager">
+    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.App" />
+      <module name="jvm-di-study" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.App" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f8e3090c-7981-409e-9873-8df3e04a2cd6" name="Default Changelist" comment="" />
+      <created>1630055554472</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1630055554472</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+</project>
