@@ -1,5 +1,8 @@
 package com.jvm.study;
 
+import java.lang.reflect.Constructor;
+import java.lang.reflect.Field;
+import java.lang.reflect.InvocationTargetException;
 import java.util.Arrays;
 
 public class App {
@@ -36,5 +39,20 @@ public class App {
                         System.out.println(myAnnotation.number());
                     }
         }));
+
+        System.out.println();
+        System.out.println("Change Value Of Member Variable Using Reflection API");
+        try {
+            Constructor<?> bookConstructor = bookClass.getConstructor(String.class);
+            Book book = (Book)bookConstructor.newInstance("myBook");
+            System.out.println(book);
+            Field field = Book.class.getDeclaredField("pbStr");
+            System.out.println("Pre Change:  " + field.get(null));
+            field.set(null, "pbStr");
+            System.out.println("Post Change:  " + field.get(null));
+        } catch (NoSuchMethodException | InvocationTargetException |
+                InstantiationException | IllegalAccessException | NoSuchFieldException e) {
+            e.printStackTrace();
+        }
     }
 }

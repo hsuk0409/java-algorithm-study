@@ -9,16 +9,20 @@ public class Book {
     private String pvStr;
 
     @MyAnnotation
-    public String pbStr;
+    public static String pbStr = "pbStr";
 
     protected String ptStr;
 
     public Book() {
     }
 
+    public Book(String pbStr) {
+        Book.pbStr = pbStr;
+    }
+
     public Book(String pvStr, String pbStr, String ptStr) {
         this.pvStr = pvStr;
-        this.pbStr = pbStr;
+        Book.pbStr = pbStr;
         this.ptStr = ptStr;
     }
 
