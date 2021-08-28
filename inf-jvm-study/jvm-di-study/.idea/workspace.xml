@@ -5,47 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f8e3090c-7981-409e-9873-8df3e04a2cd6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/AccountRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/AccountService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/AppTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jvm-study/src/main/java/com/jvm/study/di/ContainerService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jvm-study/src/main/java/com/jvm/study/di/Inject.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jvm-study/src/test/java/com/jvm/study/di/BookRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jvm-study/src/test/java/com/jvm/study/di/BookService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../jvm-study/src/test/java/com/jvm/study/di/ContainerServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../jvm-study/target/jacoco.exec" beforeDir="false" afterPath="$PROJECT_DIR$/../jvm-study/target/jacoco.exec" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../jvm-study/target/jvm-study-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../jvm-study/target/jvm-study-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../jvm-study/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../jvm-study/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../jvm-study/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../jvm-study/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../jvm-study/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../jvm-study/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../jvm-study/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../jvm-study/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../jvm-study/target/site/jacoco/com.jvm.study/App.html" beforeDir="false" afterPath="$PROJECT_DIR$/../jvm-study/target/site/jacoco/com.jvm.study/App.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../jvm-study/target/site/jacoco/com.jvm.study/App.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/../jvm-study/target/site/jacoco/com.jvm.study/App.java.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../jvm-study/target/site/jacoco/com.jvm.study/MasulsaAgent.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/../jvm-study/target/site/jacoco/com.jvm.study/MasulsaAgent.java.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../jvm-study/target/site/jacoco/com.jvm.study/Moim.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/../jvm-study/target/site/jacoco/com.jvm.study/Moim.java.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../jvm-study/target/site/jacoco/com.jvm.study/Moja.java.html" beforeDir="false" afterPath="$PROJECT_DIR$/../jvm-study/target/site/jacoco/com.jvm.study/Moja.java.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../jvm-study/target/site/jacoco/com.jvm.study/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../jvm-study/target/site/jacoco/com.jvm.study/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../jvm-study/target/site/jacoco/com.jvm.study/index.source.html" beforeDir="false" afterPath="$PROJECT_DIR$/../jvm-study/target/site/jacoco/com.jvm.study/index.source.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../jvm-study/target/site/jacoco/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../jvm-study/target/site/jacoco/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../jvm-study/target/site/jacoco/jacoco-resources/prettify.css" beforeDir="false" afterPath="$PROJECT_DIR$/../jvm-study/target/site/jacoco/jacoco-resources/prettify.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../jvm-study/target/site/jacoco/jacoco-resources/prettify.js" beforeDir="false" afterPath="$PROJECT_DIR$/../jvm-study/target/site/jacoco/jacoco-resources/prettify.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../jvm-study/target/site/jacoco/jacoco-resources/report.css" beforeDir="false" afterPath="$PROJECT_DIR$/../jvm-study/target/site/jacoco/jacoco-resources/report.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../jvm-study/target/site/jacoco/jacoco-resources/sort.js" beforeDir="false" afterPath="$PROJECT_DIR$/../jvm-study/target/site/jacoco/jacoco-resources/sort.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../jvm-study/target/site/jacoco/jacoco-sessions.html" beforeDir="false" afterPath="$PROJECT_DIR$/../jvm-study/target/site/jacoco/jacoco-sessions.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../jvm-study/target/site/jacoco/jacoco.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../jvm-study/target/site/jacoco/jacoco.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../jvm-study/target/site/jacoco/jacoco.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../jvm-study/target/site/jacoco/jacoco.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../jvm-study/target/surefire-reports/TEST-com.jvm.study.AppTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../jvm-study/target/surefire-reports/TEST-com.jvm.study.AppTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../jvm-study/target/surefire-reports/TEST-com.jvm.study.MoimTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../jvm-study/target/surefire-reports/TEST-com.jvm.study.MoimTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../jvm-study/target/surefire-reports/com.jvm.study.AppTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../jvm-study/target/surefire-reports/com.jvm.study.AppTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../jvm-study/target/surefire-reports/com.jvm.study.MoimTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../jvm-study/target/surefire-reports/com.jvm.study.MoimTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,6 +36,11 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="org.example" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
