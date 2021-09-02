@@ -23,7 +23,7 @@ public class ContainerService {
 
     private static <T> T createInstance(Class<T> classType) {
         try {
-            return classType.getConstructor(null).newInstance();
+            return classType.getConstructor((Class<?>) null).newInstance();
         } catch (InstantiationException | IllegalAccessException | InvocationTargetException | NoSuchMethodException e) {
             throw new RuntimeException(e);
         }

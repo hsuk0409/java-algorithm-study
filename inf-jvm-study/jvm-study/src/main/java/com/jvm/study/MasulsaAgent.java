@@ -9,7 +9,7 @@ import java.lang.instrument.Instrumentation;
 import static net.bytebuddy.matcher.ElementMatchers.named;
 
 public class MasulsaAgent {
-    public static void preMain(String agentArgs, Instrumentation inst) {
+    public static void preMain(Instrumentation inst) {
         new AgentBuilder.Default()
                 .type(ElementMatchers.any())
                 .transform(
