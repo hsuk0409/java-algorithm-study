@@ -1,16 +1,17 @@
 package com.spring.corestudy.order;
 
+import com.spring.corestudy.AppConfig;
 import com.spring.corestudy.member.Grade;
 import com.spring.corestudy.member.Member;
 import com.spring.corestudy.member.MemberService;
-import com.spring.corestudy.member.MemberServiceImpl;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 public class OrderServiceTest {
-    MemberService memberService = new MemberServiceImpl();
-    OrderService orderService = new OrderServiceImpl();
+    AppConfig appConfig = new AppConfig();
+    MemberService memberService = appConfig.memberService();
+    OrderService orderService = appConfig.orderService();
 
     @DisplayName("할인 정책을 적용한 주문 개체 생성 테스트")
     @Test
