@@ -2,12 +2,18 @@ package com.spring.corestudy.member;
 
 import com.spring.corestudy.AppConfig;
 import org.assertj.core.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 public class MemberServiceTest {
-    AppConfig appConfig = new AppConfig();
-    MemberService memberService = appConfig.memberService();;
+    MemberService memberService;
+
+    @BeforeEach
+    void beforeEach() {
+        AppConfig appConfig = new AppConfig();
+        memberService = appConfig.memberService();
+    }
 
     @DisplayName("멤버가 정상적으로 등록되는지 테스트")
     @Test

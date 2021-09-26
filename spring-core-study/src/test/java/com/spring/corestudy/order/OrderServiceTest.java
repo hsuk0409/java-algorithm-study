@@ -5,13 +5,20 @@ import com.spring.corestudy.member.Grade;
 import com.spring.corestudy.member.Member;
 import com.spring.corestudy.member.MemberService;
 import org.assertj.core.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 public class OrderServiceTest {
-    AppConfig appConfig = new AppConfig();
-    MemberService memberService = appConfig.memberService();
-    OrderService orderService = appConfig.orderService();
+    MemberService memberService;
+    OrderService orderService;
+
+    @BeforeEach
+    void beforeEach() {
+        AppConfig appConfig = new AppConfig();
+        memberService = appConfig.memberService();
+        orderService = appConfig.orderService();
+    }
 
     @DisplayName("할인 정책을 적용한 주문 개체 생성 테스트")
     @Test
