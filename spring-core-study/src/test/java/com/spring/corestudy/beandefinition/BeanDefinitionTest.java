@@ -9,7 +9,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 public class BeanDefinitionTest {
     AnnotationConfigApplicationContext ac = new AnnotationConfigApplicationContext(AppConfig .class);
 
-    @DisplayName("빈 설정 메타정보 확인")
+    @DisplayName("빈 설정 메타정보 확인 (**중요:: BeanDefinition 추상화)")
     @Test
     void findApplicationBean() {
         String[] beanDefinitionNames = ac.getBeanDefinitionNames();
