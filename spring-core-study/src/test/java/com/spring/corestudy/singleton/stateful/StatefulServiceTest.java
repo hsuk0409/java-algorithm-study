@@ -1,15 +1,15 @@
-package com.spring.corestudy.singleton;
+package com.spring.corestudy.singleton.stateful;
 
+import com.spring.corestudy.TestConfig;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import org.springframework.context.annotation.Bean;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class StatefulServiceTest {
-    @DisplayName("싱글톤 패턴에서 한 스레드에 요청 두개 보내기")
+    @DisplayName("싱글 스레드에서 상태 유지 싱글톤 빈은 서로 개체를 공유한다.")
     @Test
     void statefulServiceSingleton() {
         ApplicationContext ac = new AnnotationConfigApplicationContext(TestConfig.class);
@@ -27,13 +27,5 @@ public class StatefulServiceTest {
 
         assertThat(statefulService1).isSameAs(statefulService2);
         assertThat(statefulService1.getPrice()).isEqualTo(20000);
-    }
-
-    static class TestConfig {
-
-        @Bean
-        public StatefulService statefulService() {
-            return new StatefulService();
-        }
     }
 }

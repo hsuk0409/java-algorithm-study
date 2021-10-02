@@ -1,4 +1,4 @@
-package com.spring.corestudy.singleton;
+package com.spring.corestudy.singleton.stateful;
 
 public class StatefulService {
     private int price; // 상태 유지 필드
