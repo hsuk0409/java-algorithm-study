@@ -29,6 +29,14 @@ public class ConfigurationSingletonTest {
         System.out.println("orderService.memberRepository= " + memberRepository2);
         System.out.println("memberRepository= " + memberRepository);
 
+        /**
+         * @Configuration이 싱글톤 보장하는 이유
+         *  1. 해당 Configuration 파일을 빈으로 등록할 때 스프링은 CGLIB 대체 파일을 만들어
+         *     기존 소스코드를 조작한다.
+         *
+         *  2. CGLIB 파일에서는 스프링 컨테이너에 이미 등록된 빈을 찾아서 있으면 기존 것 사용
+         *     없으면 기존 로직을 호출해서 새로운 개체를 생성하고 스프링 컨테이너에 등록하기 때문.
+         */
         assertThat(memberRepository1).isSameAs(memberRepository2);
         assertThat(memberRepository).isSameAs(memberRepository2);
     }
