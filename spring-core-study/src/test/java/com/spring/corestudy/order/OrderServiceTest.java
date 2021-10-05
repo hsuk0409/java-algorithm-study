@@ -4,10 +4,11 @@ import com.spring.corestudy.AppConfig;
 import com.spring.corestudy.member.Grade;
 import com.spring.corestudy.member.Member;
 import com.spring.corestudy.member.MemberService;
-import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class OrderServiceTest {
     MemberService memberService;
@@ -32,6 +33,6 @@ public class OrderServiceTest {
         Order order = orderService.createOrder(memberId, "itemA", 20000);
 
         //then
-        Assertions.assertThat(order.getDiscountPrice()).isEqualTo(2000);
+        assertThat(order.getDiscountPrice()).isEqualTo(2000);
     }
 }
