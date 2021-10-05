@@ -3,9 +3,11 @@ package com.spring.corestudy.order;
 import com.spring.corestudy.discount.DiscountPolicy;
 import com.spring.corestudy.member.Member;
 import com.spring.corestudy.member.MemberRepository;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 
 @Component
+@RequiredArgsConstructor
 public class OrderServiceImpl implements OrderService {
 //    private final DiscountPolicy discountPolicy = new FixDiscountPolicy(); // DIP 위반
 //    private final DiscountPolicy discountPolicy = new RateDiscountPolicy(); // DIP 위반
@@ -13,11 +15,6 @@ public class OrderServiceImpl implements OrderService {
     // DIP OK!
     private final MemberRepository memberRepository;
     private final DiscountPolicy discountPolicy;
-
-    public OrderServiceImpl(MemberRepository memberRepository, DiscountPolicy discountPolicy) {
-        this.memberRepository = memberRepository;
-        this.discountPolicy = discountPolicy;
-    }
 
     @Override
     public Order createOrder(Long memberId, String itemName, int itemPrice) {
