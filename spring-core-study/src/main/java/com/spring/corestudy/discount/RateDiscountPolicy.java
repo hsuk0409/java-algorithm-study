@@ -2,9 +2,11 @@ package com.spring.corestudy.discount;
 
 import com.spring.corestudy.member.Grade;
 import com.spring.corestudy.member.Member;
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
 @Component
+@Primary
 public class RateDiscountPolicy implements DiscountPolicy {
     private final float DISCOUNT_PERCENT = 10;
 
