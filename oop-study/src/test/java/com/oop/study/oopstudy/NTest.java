@@ -40,34 +40,45 @@ public class NTest {
         Map<Integer, Queue<Integer>> queues = new HashMap<>();
 
         for (int[] board : boards) {
-            if (board[0] > -1) {
-                if (queues.size() < 1 || queues.get(board[0]) == null) {
-                    Queue<Integer> queue = new LinkedList<>();
-                    queue.add(board[1]);
-                    queues.put(board[0], queue);
-                } else {
-                    queues.get(board[0]).add(board[1]);
-                }
+            if (greaterThenOrEqualZero(board[0])) {
+                pushBucket(queues, board);
             } else {
                 if (queues.size() == 0) continue;
 
                 Queue<Integer> queue = queues.get(tmpNum++);
                 if (queue != null) {
-                    Integer poll = queue.poll();
-                    result.add(poll);
+                    popBucketAndSave(result, queue);
                 } else {
                     while (queues.get(tmpNum) == null) {
                         ++tmpNum;
                         if (tmpNum == num) tmpNum = 0;
                     }
                     queue = queues.get(tmpNum);
-                    Integer poll = queue.poll();
-                    result.add(poll);
+                    popBucketAndSave(result, queue);
                 }
                 if (tmpNum == num) tmpNum = 0;
             }
         }
 
         return result;
+    }
+
+    private boolean greaterThenOrEqualZero(int num) {
+        return num > -1;
+    }
+
+    private void pushBucket(Map<Integer, Queue<Integer>> queues, int[] board) {
+        if (queues.size() < 1 || queues.get(board[0]) == null) {
+            Queue<Integer> queue = new LinkedList<>();
+            queue.add(board[1]);
+            queues.put(board[0], queue);
+        } else {
+            queues.get(board[0]).add(board[1]);
+        }
+    }
+
+    private void popBucketAndSave(List<Integer> result, Queue<Integer> queue) {
+        Integer poll = queue.poll();
+        result.add(poll);
     }
 }
