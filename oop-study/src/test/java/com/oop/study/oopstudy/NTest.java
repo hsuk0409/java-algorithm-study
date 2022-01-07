@@ -34,6 +34,26 @@ public class NTest {
         }
     }
 
+    @Test
+    void secondTest2() {
+        int[][] boards = new int[][] {
+                {0, 1},
+                {0, 2},
+                {-1, -1},
+                {-1, -1},
+                {-1, -1},
+                {-1, -1}
+        };
+
+        int num = 4;
+        List<Integer> result = processSomething(boards, num);
+        List<Integer> tmp = Arrays.asList(1, 2);
+
+        for (int i = 0; i < result.size(); ++i) {
+            assertThat(result.get(i)).isEqualTo(tmp.get(i));
+        }
+    }
+
     private List<Integer> processSomething(int[][] boards, final int num) {
         int tmpNum = 0;
         List<Integer> result = new ArrayList<>();
@@ -43,19 +63,17 @@ public class NTest {
             if (greaterThenOrEqualZero(board[0])) {
                 pushBucket(queues, board);
             } else {
-                if (queues.size() == 0) continue;
+                if (queues.size() == 0 || queues.get(0).size() <= 0) continue;
 
                 Queue<Integer> queue = queues.get(tmpNum++);
-                if (queue != null) {
-                    popBucketAndSave(result, queue);
-                } else {
+                if (queue == null || queue.size() <= 0) {
                     while (queues.get(tmpNum) == null) {
                         ++tmpNum;
                         if (tmpNum == num) tmpNum = 0;
                     }
                     queue = queues.get(tmpNum);
-                    popBucketAndSave(result, queue);
                 }
+                popBucketAndSave(result, queue);
                 if (tmpNum == num) tmpNum = 0;
             }
         }
