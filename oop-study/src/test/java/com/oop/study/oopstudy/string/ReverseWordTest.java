@@ -11,7 +11,7 @@ public class ReverseWordTest {
         String expected = "justin is name my Hi,";
 
         String result = reverseWord(str);
-        assert (result.equals(expected));
+        assert result.equals(expected);
     }
 
     public String reverseWord(String str) {
