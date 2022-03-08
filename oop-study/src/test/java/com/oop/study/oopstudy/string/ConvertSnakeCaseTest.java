@@ -15,13 +15,32 @@ public class ConvertSnakeCaseTest {
         String expected = "MIERO_FIBER_ZON_MAT_TANG";
 
         //when
-        convertToSnakeCase(str);
+        str = convertToSnakeCase(str);
 
         //then
         assertThat(str).isEqualTo(expected);
     }
 
-    private void convertToSnakeCase(String str) {
+    private String convertToSnakeCase(String str) {
+        StringBuilder sb = new StringBuilder();
 
+        char[] chars = str.toCharArray();
+
+        for (char c : chars) {
+            if (c == ' ') {
+                sb.append("_");
+                continue;
+            }
+
+            if (Character.isUpperCase(c)) {
+                sb.append("_");
+                sb.append(c);
+                continue;
+            }
+
+            sb.append(Character.toUpperCase(c));
+        }
+
+        return sb.toString();
     }
 }
