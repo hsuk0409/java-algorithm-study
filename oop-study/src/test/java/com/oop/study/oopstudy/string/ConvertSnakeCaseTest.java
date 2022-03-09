@@ -7,7 +7,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class ConvertSnakeCaseTest {
 
-    @DisplayName("띄어씌기와 카멜 케이스를 스네이크 케이스로 변환한다.")
+    @DisplayName("띄어씌기와 카멜 케이스를 대문자 스네이크 케이스로 변환한다.")
     @Test
     void convertSnakeCaseTest() {
         //given
@@ -15,13 +15,13 @@ public class ConvertSnakeCaseTest {
         String expected = "MIERO_FIBER_ZON_MAT_TANG";
 
         //when
-        str = convertToSnakeCase(str);
+        str = convertToUpperSnakeCase(str);
 
         //then
         assertThat(str).isEqualTo(expected);
     }
 
-    private String convertToSnakeCase(String str) {
+    private String convertToUpperSnakeCase(String str) {
         StringBuilder sb = new StringBuilder();
 
         char[] chars = str.toCharArray();
