@@ -21,10 +21,24 @@ public class ConvertSnakeCaseTest {
         assertThat(str).isEqualTo(expected);
     }
 
+    @DisplayName("맨앞, 뒤 공백 무시하고 대문자 스네이크 케이스로 변환한다.")
+    @Test
+    void convertSnakeCaseIgnoreBlankTest() {
+        //given
+        String str = " miero fiberZon mat tang ";
+        String expected = "MIERO_FIBER_ZON_MAT_TANG";
+
+        //when
+        str = convertToUpperSnakeCase(str);
+
+        //then
+        assertThat(str).isEqualTo(expected);
+    }
+
     private String convertToUpperSnakeCase(String str) {
         StringBuilder sb = new StringBuilder();
 
-        char[] chars = str.toCharArray();
+        char[] chars = str.trim().toCharArray();
 
         for (char c : chars) {
             if (c == ' ') {
