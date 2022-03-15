@@ -20,13 +20,13 @@ public class DynamicProgrammingTest {
 
         int maxValue = getMaxValue(15, items);
 
-        System.out.println(String.format("Max Value: %d", maxValue));
+        System.out.printf("Max Value: %d%n", maxValue);
     }
 
     private int getMaxValue(int numSpace, Item[] items) {
         int numItems = items.length;
 
-        int cache[][] = new int[numItems][numSpace + 1];
+        int[][] cache = new int[numItems][numSpace + 1];
 
         for (int s = 1; s <= numSpace; ++s) {
             if (items[0].getSpace() > s) {

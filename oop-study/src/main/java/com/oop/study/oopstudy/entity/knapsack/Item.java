@@ -1,8 +1,8 @@
 package com.oop.study.oopstudy.entity.knapsack;
 
 public class Item {
-    private int value;
-    private int space;
+    private final int value;
+    private final int space;
 
     public Item(final int value, final int space) {
         this.value = value;
