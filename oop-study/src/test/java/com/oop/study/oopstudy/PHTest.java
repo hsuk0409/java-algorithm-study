@@ -11,16 +11,18 @@ public class PHTest {
 //        System.out.println(index);
 
         System.out.println("--------- Recursive --------");
-        int index = getIndexRecursive(9, arr, 0, arr.length - 1);
+        int length = arr.length - 1;
+
+        int index = getIndexRecursive(9, arr, 0, length);
         System.out.println(index);
 
-        index = getIndexRecursive(20, arr, 0, arr.length - 1);
+        index = getIndexRecursive(20, arr, 0, length);
         System.out.println(index);
 
-        index = getIndexRecursive(2, arr, 0, arr.length - 1);
+        index = getIndexRecursive(2, arr, 0, length);
         System.out.println(index);
 
-        index = getIndexRecursive(200, arr, 0, arr.length - 1);
+        index = getIndexRecursive(200, arr, 0, length);
         System.out.println(index);
 
         System.out.println("--------- Loop --------");
