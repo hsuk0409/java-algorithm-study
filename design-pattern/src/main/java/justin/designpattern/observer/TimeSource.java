@@ -1,6 +1,18 @@
 package justin.designpattern.observer;
 
-public interface TimeSource {
+import java.util.Vector;
 
-    void registerObserver(ClockObserver observer);
+public class TimeSource {
+
+    private final Vector<ClockObserver> clockObservers = new Vector<>();
+
+    protected void notify(int hours, int minutes, int seconds) {
+        for (ClockObserver observer : clockObservers) {
+            observer.update(hours, minutes, seconds);
+        }
+    }
+
+    public void registerObserver(ClockObserver observer) {
+        clockObservers.add(observer);
+    }
 }
