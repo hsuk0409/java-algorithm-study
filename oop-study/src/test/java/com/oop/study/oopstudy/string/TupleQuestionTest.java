@@ -21,8 +21,7 @@ public class TupleQuestionTest {
 
         while (i < s3.length() - 1) {
             ArrayList<Integer> tmpNums = new ArrayList<>();
-            if (s3.charAt(i) == '{') {
-                ++i;
+            if (s3.charAt(i++) == '{') {
                 StringBuilder numStr = new StringBuilder();
                 while (s3.charAt(i) != '}') {
                     if (s3.charAt(i) != ',') {
@@ -39,7 +38,6 @@ public class TupleQuestionTest {
             if (tmpNums.size() > 0) {
                 tmpStorages.add(tmpNums);
             }
-            ++i;
         }
 
         sortArrArr(tmpStorages);
