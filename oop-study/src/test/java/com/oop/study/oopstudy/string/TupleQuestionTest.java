@@ -12,20 +12,20 @@ public class TupleQuestionTest {
     @DisplayName("문자열 그룹 중 적은 수 순서대로 중복없이 그룹핑하기")
     @Test
     void tupleQuestionTest() {
-        String s1 = "{{2},{2,1},{2,1,3},{2,1,3,4}}";
-        String s2 = "{{1,2,3},{2,1},{1,2,4,3},{2}}";
-        String s3 = "{{20,111},{111}}";
+//        String s = "{{2},{2,1},{2,1,3},{2,1,3,4}}";
+//        String s = "{{1,2,3},{2,1},{1,2,4,3},{2}}";
+        String s = "{{20,111},{111}}";
 
         ArrayList<ArrayList<Integer>> tmpStorages = new ArrayList<>();
         int i = 1;
 
-        while (i < s3.length() - 1) {
+        while (i < s.length() - 1) {
             ArrayList<Integer> tmpNums = new ArrayList<>();
-            if (s3.charAt(i++) == '{') {
+            if (s.charAt(i++) == '{') {
                 StringBuilder numStr = new StringBuilder();
-                while (s3.charAt(i) != '}') {
-                    if (s3.charAt(i) != ',') {
-                        numStr.append(s3.charAt(i));
+                while (s.charAt(i) != '}') {
+                    if (s.charAt(i) != ',') {
+                        numStr.append(s.charAt(i));
                     } else {
                         tmpNums.add(Integer.parseInt(numStr.toString()));
                         numStr.delete(0, numStr.length());
@@ -61,26 +61,29 @@ public class TupleQuestionTest {
     @DisplayName("문자열 그룹 중 적은 수 순서대로 중복없이 그룹핑하기 (다른사람 코드)")
     @Test
     void tupleQuestionTest2() {
-        String s = "{{20,111},{111}}";
+//        String s = "{{20,111},{111}}";
+        String s = "{{1,2,3},{2,1},{1,2,4,3},{2}}";
 
-        Set<String> set = new HashSet<>();
         String tmpStr1 = s.replaceAll("[{]", " ");
         String tmpStr2 = tmpStr1.replaceAll("[}]", " ");
         String[] arr = tmpStr2.trim().split(" , ");
         Arrays.sort(arr, Comparator.comparingInt(String::length));
         int[] result = new int[arr.length];
+        Set<String> tmpSet = new HashSet<>();
         int resultInx = 0;
         for (String s1 : arr) {
             for (String s2 : s1.split(",")) {
-                if (set.add(s2)) {
+                if (tmpSet.add(s2)) {
                     result[resultInx++] = Integer.parseInt(s2);
                 }
             }
         }
 
         List<Integer> expect = new ArrayList<>();
-        expect.add(111);
-        expect.add(20);
+        expect.add(2);
+        expect.add(1);
+        expect.add(3);
+        expect.add(4);
 
         for (int i = 0; i < result.length; ++i) {
             assertThat(result[i]).isEqualTo(expect.get(i));
